@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<style>
+	strong {
+		color: #EEE8D5;
+	}
+</style>
+<head>
+	<meta charset="utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//css/reveal.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//css/theme/blood.css">
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Ingredients for a DevOps cake</h1>
+					<p>by Luk Weyens</p>
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+					<ul>
+						<li class="fragment">Current state of DevOps</li>
+						<li class="fragment">Introduction to Cake</li>
+						<li class="fragment">Using Cake to build a DevOps ecosystem</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+				    <h3>Does this look familiar?</h3>
+						<img align="left" src="img/DevOps-Soup.png" />
+						<ul>
+							<li class="fragment">Powershell</li>
+							<li class="fragment">Ruby</li>
+							<li class="fragment">Batch files</li>
+							<li class="fragment">JSON helper files</li>
+							<li class="fragment">...</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Typical members of a DevOps team</h3>
+						<ul>
+							<li class="fragment">The guy who wants to try new things</li>
+							<li class="fragment">The guy who knows batch files inside and out</li>
+							<li class="fragment">The guy who likes to reinvent the wheel</li>
+							<li class="fragment">You, who got handed this hot potato</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Why Cake?</h3>
+						<img src="img/cake.png" />
+					</section>
+					<section>
+						<p>Use the same language as your development team.</p>
+						<p class="fragment">If not C#, find an alternative (Fake for F#)</p>
+						<p class="fragment">Create a healthy DevOps ecosystem</p>
+						<p class="fragment">Reduce development in your CI tool</p>
+					</section>
+				</section>
+
+				<section>
+					<h3>Demo - Introduction to Cake scripting</h3>
+					<p>Create a sample Cake script that builds a solution</p>
+					<p>Introduction to the workings of Cake</p>
+					<p>Run the script locally</p>
+					<p>Expand the script with running Unit Tests and Code Coverage</p>
+				</section>
+
+				<section>
+					<h3>Demo - Cake integration with CI</h3>
+					<p>Integrate the previous script in TeamCity (or another CI system)</p>
+					<p>Provide your CI environment with Unit Test and Code Coverage metadata</p>
+					<p>Exception handling</p>
+				</section>
+
+				<section>
+					<h3>Demo - Publish to Google Drive</h3>
+					<p>Showcase several different techniques to call external code from Cake</p>
+					<p>By referencing a dll directly</p>
+					<p>Through NuGet integration</p>
+					<p>By creating and using an AddIn</p>
+				</section>
+
+				<section>
+					<h3>Demo - Creating the ecosystem</h3>
+					<p>Building upon the previous demo's, showcase the possibilities and extensibility this setup provides.</p>
+				</section>
+			</div>
+		</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//lib/js/head.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//js/reveal.js"></script>
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+        dependencies: [
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0//plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+			});
+		</script>
+	</body>
+</html>
